@@ -7,7 +7,7 @@ int jumlahLulus10(int nilai[]) {
         if (nilai[i] >= 75) {
             lulus++;
         }
-    }  
+    }
     return lulus;
 }
 int jumlahMahasiswa10() {
