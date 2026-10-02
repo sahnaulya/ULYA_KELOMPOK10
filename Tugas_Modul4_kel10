@@ -1,48 +1,35 @@
-#include <iostream>
-using namespace std;
+def jumlah_lulus10(nilai):
+    lulus = 0
+    for i in range(10):
+        if nilai[i] >= 75:
+            lulus += 1
+    return lulus
 
-int jumlahLulus10(int nilai[]) {
-    int lulus = 0;
-    for (int i = 0; i < 10; i++) {
-        if (nilai[i] >= 75) {
-            lulus++;
-        }
-    }
-    return lulus;
-}
-int jumlahMahasiswa10() {
-    return 10;
-}
 
-class NilaiMahasiswa10 {
-public:
-    void cek10Mahasiswa() {
+def jumlah_mahasiswa10():
+    return 10
 
-        cout << "Jumlah mahasiswa = " << jumlahMahasiswa10() << "\n" << endl;
-        int nilai[10] = {80, 65, 90, 70, 55, 60, 85, 95, 100, 75};
 
-        for (int i = 0; i < 10; i++) {
-            cout << "Nilai mahasiswa ke-" << i + 1
-                 << " = " << nilai[i] << " : ";
+class NilaiMahasiswa10:
+    def cek10_mahasiswa(self):
+        print("Jumlah mahasiswa =", jumlah_mahasiswa10(), "\n")
 
-            if (nilai[i] >= 75) {
-                cout << "Lulus" << endl;
-            } else {
-                cout << "Tidak Lulus" << endl;
-            }
-        }
+        nilai = [80, 65, 90, 70, 55, 60, 85, 95, 100, 75]
 
-        cout << "\nJumlah mahasiswa yang lulus = " << jumlahLulus10(nilai) << endl;
-    }
-};
+        for i in range(10):
+            print("Nilai mahasiswa ke-", i + 1, "=", nilai[i], ": ", end="")
 
-int main() {
-    cout << "=======================================" << endl;
-    cout << "=        KELOMPOK 10 (SHIFT 2)        =" << endl;
-    cout << "=======================================\n" << endl;
+            if nilai[i] >= 75:
+                print("Lulus")
+            else:
+                print("Tidak Lulus")
 
-    NilaiMahasiswa10 kelompok10;
-    kelompok10.cek10Mahasiswa();
+        print("\nJumlah mahasiswa yang lulus =", jumlah_lulus10(nilai))
 
-    return 0;
-}
+
+print("=======================================")
+print("=        KELOMPOK 10 (SHIFT 2)        =")
+print("=======================================\n")
+
+kelompok10 = NilaiMahasiswa10()
+kelompok10.cek10_mahasiswa()
